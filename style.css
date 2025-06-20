@@ -64,6 +64,17 @@ header {
     z-index: 100;
 }
 
+/* Add this new rule to style the logo text */
+.logo-text-bg {
+    background-color: #e9e9e9; /* Light grey background */
+    padding: 8px 15px;          /* Vertical and horizontal padding */
+    border-radius: 8px;         /* Rounded corners */
+    color: #003366;             /* Dark blue text color, similar to image */
+    font-family: 'Times New Roman', Times, serif; /* A font similar to the image */
+    letter-spacing: 2px;        /* Adds space between letters */
+    font-weight: bold;
+}
+
 header .container {
     display: flex;
     justify-content: space-between;
@@ -557,6 +568,17 @@ nav ul li a:hover {
         margin: 1rem 0;
     }
 
+    /* Add these new rules for the logo on mobile */
+    .logo {
+        font-size: 1rem; /* Reduces the base font size of the logo container */
+    }
+
+    .logo-text-bg {
+        line-height: 1.2; /* Adjusts the line height for two lines */
+        padding: 8px 12px; /* Slightly adjust padding */
+        text-align: center; /* Centers the text */
+    }
+
     .language-switcher {
         order: -1;
         margin-bottom: 1rem;
@@ -569,29 +591,45 @@ nav ul li a:hover {
 
 /* For Mobile Phones */
 @media (max-width: 768px) {
-    /* General Styles */
-    .section-title { font-size: 2rem; }
+    /* --- Header & Logo --- */
+    .logo img {
+        height: 50px; /* Make ETS image smaller */
+    }
+    .logo-text-bg {
+        font-size: 0.8rem;   /* Make logo text smaller */
+        padding: 6px 10px;   /* Reduce padding */
+        letter-spacing: 1px; /* Reduce letter spacing */
+    }
 
-    /* Hero Section */
-    .hero-content h1 { font-size: 2.5rem; }
-    .hero-content .tagline { font-size: 1.2rem; }
+    /* --- General Styles --- */
+    .section-title { 
+        font-size: 2rem; 
+    }
 
-    /* Business Card Section */
+    /* --- Hero Section --- */
+    .hero-content h1 { 
+        font-size: 2.5rem; 
+    }
+    .hero-content .tagline { 
+        font-size: 1.2rem; 
+    }
+
+    /* --- Business Card Section --- */
     .business-card-image-section {
         padding: 2rem 15px;
     }
     
-    /* Certificate Slider */
+    /* --- Certificate Slider --- */
     #certificate-slider-section {
         padding: 3rem 15px;
     }
 
-    /* Contact Section */
+    /* --- Contact Section --- */
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
 
-    /* New Footer Section */
+    /* --- New Footer Section --- */
     .footer-content {
         flex-direction: column;
     }
